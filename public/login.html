@@ -1,0 +1,11 @@
+
+<a href="/polls" ><button class="btn btn-info">Home</button></a> 
+<a href="/register" ><button class="btn btn-info">Register</button></a> 
+<hr>
+<h3 ng-if="vm.error">{{vm.error}}</h3>
+<hr>
+<input type="text" class="form-control" ng-model="vm.user.email" placeholder="your email">
+<br>
+<input type="password" class="form-control" ng-model="vm.user.password" placeholder="your pass">
+<br>
+<button class="btn btn-info" ng-click="vm.login()" ng-disabled="!vm.user || !vm.user.password || !vm.user.email">Login</button>

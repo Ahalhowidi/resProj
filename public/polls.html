@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="asset/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    
+<nav class="navbar navbar-inverse">
+
+<a href="/profile" ng-if="vm.isLoggedIn() === true"><button class="btn btn-info">Profile</button></a>
+<a href="/login" ng-if="vm.isLoggedIn() !== true"><button class="btn btn-info">Login</button></a>
+<a href="/register" ng-if="vm.isLoggedIn() !== true"><button class="btn btn-info">Register</button></a>
+<button class="btn btn-danger navbar-right" ng-click="vm.logOut();" ng-if="vm.isLoggedIn() === true">Logout</button>
+</nav>
+<hr>
+<div>
+    <img id="mainImg" src="1.jpg" alt="">
+</div>
+<ul id="main">
+    <h3>Algorithms</h3>
+    <li ng-repeat="poll in vm.polls">
+       <a href="/poll/{{poll._id}}" class="list-group-item active">
+        {{poll.name}}
+       </a><br>
+    </li>
+</ul>
+</body>
+</html>

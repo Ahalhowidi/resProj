@@ -1,0 +1,24 @@
+<!--<a class="btn btn-success" ng-href="http://twitter.com/share?url={{vm.link}}">Share</a>-->
+
+<a href="/polls" ><button class="btn btn-success">Home</button></a>
+<hr>
+<h4>{{vm.name}}</h4>
+<div  >
+	<div ng-repeat="option in vm.poll" class="jumbotron">
+	<ul >
+		<li>slution: {{option.name}}</li>
+		<button ng-click="vm.vote(option._id);" class="btn btn-info">Like</button>   ({{option.votes}})    likes
+	</ul>
+	</div>
+</div>
+<hr>
+<div>
+	<textarea ng-model="vm.option" class="form-control" placeholder="Write a slution" ></textarea>
+	<button ng-click="vm.addOption();" class="btn btn-primary btn-block" ng-disabled="vm.isLoggedIn() === false">Add a slution</button>
+	<br>
+	<div class="add" ng-if="vm.isLoggedIn() !== true">
+        <p>To add a new slution You need to login or register </p>
+    </div>
+<div>    
+Added by : {{vm.owner}}
+</div>

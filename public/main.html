@@ -1,0 +1,15 @@
+
+<nav class="navbar navbar-inverse">
+<a href="/profile" ng-if="vm.isLoggedIn() === true"><button class="btn btn-success">Profile</button></a>
+<a href="/polls" ><button class="btn btn-success">Polls</button></a>
+<a href="/login" ng-if="vm.isLoggedIn() !== true"><button class="btn btn-info navbar-right">Login</button></a>
+<a href="/register" ng-if="vm.isLoggedIn() !== true"><button class="btn btn-info navbar-right">Register</button></a>
+<button class="btn btn-danger navbar-right" ng-click="vm.logOut();" ng-if="vm.isLoggedIn() === true">Logout</button>
+</nav>
+<hr>
+<div class="jumbotron">
+  <h1> Voting </h1>
+  <p>Voting App project built in: HTML, Javascript, Nodejs, Express, Angular, MongoDB.</p>
+  <p><a href="https://www.linkedin.com/in/hameed-alhowidi-a24b58117/" class="btn btn-primary btn-lg" target="-blank">See more about me</a></p>
+</div>
+

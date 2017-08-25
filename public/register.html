@@ -1,0 +1,15 @@
+
+<a href="/polls" ><button class="btn btn-info">Home</button></a> 
+<a href="/login" ><button class="btn btn-info"><Login>Login</Login></button></a> 
+<hr>
+<h3 ng-if="vm.error">{{vm.error}}</h3>
+<hr>
+<input type="text" class="form-control" ng-model="vm.user.name" placeholder="Your Name">
+<br>
+<input type="email" class="form-control" ng-model="vm.user.email" placeholder="Your Email">
+<br>
+<input type="text" class="form-control" ng-model="vm.user.gitAcount" placeholder="Your gitHub account">
+<br>
+<input type="password" class="form-control" ng-model="vm.user.password" placeholder="Your Password">
+<br>
+<button class="btn btn-info" ng-click="vm.register()" ng-disabled="!vm.user || !vm.user.password || !vm.user.name || !vm.user.email">Register</button>
