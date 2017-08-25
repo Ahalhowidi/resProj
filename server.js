@@ -1,5 +1,5 @@
 //Creat DB connection
-var db  = 'mongodb://localhost:27017/restProject';
+var db = "mongodb://hameed:hameed@ds159963.mlab.com:59963/fccvoting"
 //Creat a port for server to listen on
 var port = process.env.PORT || 8000;
 
